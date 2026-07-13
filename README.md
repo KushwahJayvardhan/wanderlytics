@@ -1,4 +1,4 @@
-# TripScope
+# Wanderlystic
 
 A full-stack Travel & Tourism data platform: a Python scraping/ETL pipeline, a FastAPI backend, and a React frontend for exploring destinations.
 
