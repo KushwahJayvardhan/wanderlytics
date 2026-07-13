@@ -85,12 +85,9 @@ This starts Postgres and the API together. Run the pipeline separately against t
 - React frontend: search/browse, destination detail, favorites, login/signup, dark mode
 - pytest suite (6 passing tests) covering core API behavior
 
-**Intentionally left as next steps** (mentioned so you can extend deliberately, not because they were forgotten):
+
 - Live weather/POI API integration (OpenWeatherMap, OpenTripMap) — the `weather_snapshots` table and a stub endpoint pattern are already in place
 - APScheduler-based automatic re-scraping on a schedule
 - Interactive map (Leaflet is installed in `frontend/package.json`, ready to wire up)
 - CI/CD pipeline (GitHub Actions running `pytest` + frontend build on push)
 
-## Resume line
-
-> Built and deployed a full-stack travel data platform (Python, FastAPI, PostgreSQL, React) with an automated scraping pipeline, JWT authentication, and a searchable destination explorer.
