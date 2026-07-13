@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.db
+
+# Data
+scraper/raw_data/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+
+# Env
+.env
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Test
+.pytest_cache/

@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: tripscope
+      POSTGRES_PASSWORD: tripscope
+      POSTGRES_DB: tripscope
+    ports:
+      - "5432:5432"
+    volumes:
+      - tripscope_pgdata:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    environment:
+      DATABASE_URL: postgresql://tripscope:tripscope@db:5432/tripscope
+      JWT_SECRET_KEY: change-me-in-production
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  tripscope_pgdata:
